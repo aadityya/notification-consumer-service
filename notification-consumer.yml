@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-consumer-with-binder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-consumer-with-binder
+  template:
+    metadata:
+      labels:
+        app: notification-consumer-with-binder
+    spec:
+      containers:
+        - name: app
+          image: notificationpoc.azurecr.io/notification-consumer-with-binder:latest
+          ports:
+            - containerPort: 8083
+          imagePullPolicy: Always
