@@ -4,7 +4,7 @@ public class Notification {
     private String notificationId;
     private String message;
 
-    private String sdkUsed = "azure-stream-binder-servicebus";
+    private String sdkUsed = "azure-starter-servicebus";
 
     public String getNotificationId() {
         return notificationId;
